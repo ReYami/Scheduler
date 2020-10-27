@@ -22,7 +22,7 @@ public class Event {
     }
 
     public String toString(){
-            return "Task name: " + name +
+            return "\n Task name: " + name +
                     "\n Organization: " + organization +
                     "\n Priority level: " + priorityLv +
                     "\n Details: " + details +

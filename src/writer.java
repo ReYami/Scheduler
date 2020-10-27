@@ -15,7 +15,7 @@ public class writer {
     public writer() throws FileNotFoundException{
         //formatting the date
         today = new Date();
-        pattern = "yyyy/MM/dd";
+        pattern = "yyyy-MM-dd";
         Pattern = new SimpleDateFormat(pattern);
         Pattern.format(today);
         //creating a file to read the date from.
