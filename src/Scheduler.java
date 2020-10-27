@@ -17,14 +17,19 @@ public class Scheduler {
             Event base = new Event("", "", 0, "");
             out.println("is there anything else?");
             check = text.nextLine();
-
             if(check.equals("yes")){
                 active = true;
                 Scribe.setOutputTasklist(Scribe.x);
                 out.print(base);
                 Scribe.setOutputConsole(Scribe.console);
+                out.println("Right then, Whats next?");
             }else{
                 active = false;
+                Scribe.setOutputTasklist(Scribe.x);
+                out.print(base);
+                Scribe.setOutputConsole(Scribe.console);
+                out.println("I've put the tasks in a document for you, see you tomorrow!");
+                break;
             }
         }
 

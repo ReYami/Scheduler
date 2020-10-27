@@ -18,7 +18,7 @@ public class Event {
         priorityLv = input.nextInt();
         input.nextLine();
         out.println("Are there any other details I should record for you?");
-        input.nextLine();
+        details = input.nextLine();
     }
 
     public String toString(){
