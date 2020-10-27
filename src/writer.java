@@ -9,7 +9,8 @@ public class writer {
     Date today;
     String pattern;
     SimpleDateFormat Pattern;
-
+    PrintStream x;
+    PrintStream console;
 
     public writer() throws FileNotFoundException{
         //formatting the date
@@ -18,8 +19,8 @@ public class writer {
         Pattern = new SimpleDateFormat(pattern);
         Pattern.format(today);
         //creating a file to read the date from.
-        PrintStream x = new PrintStream(new File(today + " TASKS.txt"));
-        PrintStream console = System.out;
+        x = new PrintStream(new File(today + " TASKS.txt"));
+        console = System.out;
 
     }
 
@@ -28,5 +29,6 @@ public class writer {
     }
     public void setOutputTasklist(PrintStream tasklist){
         System.setOut(tasklist);
-    }
+
+}
 }

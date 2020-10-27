@@ -8,7 +8,7 @@ public class Event {
     private int priorityLv;
     private String details;
 
-    public Event(){
+    public Event(String nameX, String organizationX, int PriorityLvX, String detailsX){
         Scanner input = new Scanner(System.in);
         out.println("What's this task called?");
         name = input.nextLine();
@@ -25,7 +25,8 @@ public class Event {
             return "Task name: " + name +
                     "\n Organization: " + organization +
                     "\n Priority level: " + priorityLv +
-                    "\n Details: " + details;
+                    "\n Details: " + details +
+                    "\n =========================================================";
 
     }
 }

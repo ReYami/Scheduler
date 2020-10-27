@@ -1,15 +1,32 @@
-import java.io.PrintStream;
-import static java.lang.System.out;
+import java.io.FileNotFoundException;
 
+import static java.lang.System.out;
+import java.nio.file.FileAlreadyExistsException;
 import java.util.Scanner;
-import java.util.Date;
+
 
 public class Scheduler {
-    public static void main(String [] args){
-        boolean active;
+    public static void main(String [] args) throws FileNotFoundException, FileAlreadyExistsException {
+        Scanner text = new Scanner(System.in);
+        String check;
+        boolean active = true;
+        writer Scribe = new writer();
         out.println("Hey, I'll schedule some events for you");
-        //its really more of a task list right now but whatever.
+        //its really more of a tasklist right now but whatever.
+        while(active == true){
+            Event base = new Event("", "", 0, "");
+            out.println("is there anything else?");
+            check = text.nextLine();
 
+            if(check.equals("yes")){
+                active = true;
+                Scribe.setOutputTasklist(Scribe.x);
+                out.print(base);
+                Scribe.setOutputConsole(Scribe.console);
+            }else{
+                active = false;
+            }
+        }
 
     }
 }
